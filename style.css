@@ -1,0 +1,120 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: #0f172a;
+  /* Deep blue/slate */
+  color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#output_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #a5f3fc;
+  z-index: 10;
+  pointer-events: none;
+  font-weight: 300;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.aurora-bg {
+  background: #0b1120;
+  position: relative;
+  overflow: hidden;
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  filter: blur(40px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.aurora-bg::before {
+  background:
+    radial-gradient(circle at 20% 30%, #0ea5e9 0%, transparent 40%),
+    radial-gradient(circle at 80% 40%, #2563eb 0%, transparent 40%);
+  animation: aurora-shift-1 25s infinite alternate linear;
+}
+
+.aurora-bg::after {
+  background:
+    radial-gradient(circle at 70% 80%, #38bdf8 0%, transparent 40%),
+    radial-gradient(circle at 30% 70%, #1d4ed8 0%, transparent 40%);
+  animation: aurora-shift-2 30s infinite alternate linear;
+}
+
+@keyframes aurora-shift-1 {
+  0% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.1) translate(-5%, 10%) rotate(5deg);
+  }
+
+  100% {
+    transform: scale(1) translate(10%, -5%) rotate(-5deg);
+  }
+}
+
+@keyframes aurora-shift-2 {
+  0% {
+    transform: scale(1.1) translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1) translate(5%, -10%) rotate(-5deg);
+  }
+
+  100% {
+    transform: scale(1.1) translate(-10%, 5%) rotate(5deg);
+  }
+}

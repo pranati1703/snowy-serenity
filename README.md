@@ -1,0 +1,33 @@
+# Snowy Serenity: Frozen Web Visual
+
+**Snowy Serenity** is an interactive, magical web experience that uses real-time hand tracking to control a virtual frozen world.
+
+## ✨ Features
+- **🖐️ Open Hand**: Scatter snowflakes and leave magical trails.
+- **✊ Closed Fist**: Attract snowflakes and manifest a giant crystal.
+- **👐 Together**: Unleash a **Frost Nova** pulse.
+- **❄️ Procedural Visuals**: High-performance canvas-based particle system.
+- **🎵 Dynamic Audio**: Real-time synthesized soundscapes that react to your movements.
+
+## 🛠️ Built With
+- **MediaPipe Hands**: For high-fidelity AI hand tracking.
+- **Web Audio API**: For real-time, procedurally generated audio.
+- **Vanilla JavaScript/CSS**: For maximum performance and flexibility.
+
+## 🚀 Getting Started
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Experience the Magic**:
+   Open the browser at the provided URL, allow camera access, and click **Enter Experience**.
+
+## 📄 License
+This project is open-source and available for educational and experimental use.
